@@ -1,12 +1,14 @@
 \documentclass[12pt,twoside]{book} 
 \usepackage[toc,page]{appendix}
-\usepackage[left=2.5cm,top=3cm,right=2.5cm,bottom=3cm, bindingoffset=0.5cm]{geometry}
+%\usepackage[left=2.5cm,top=3cm,right=2.5cm,bottom=3cm, bindingoffset=0.5cm]{geometry}
+
+\usepackage[paperheight=9in,paperwidth=7.5in,top=1in,bottom=1in,right=1in,left=1in,heightrounded,showframe, bindingoffset=0.5cm]{geometry}
 \usepackage[font={small}, labelfont=bf]{caption}
 \usepackage{subcaption}
 \usepackage[utf8]{inputenc}
 \usepackage{setspace}
 \doublespacing
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 %Font
 \usepackage[T1]{fontenc}
 \usepackage{booktabs}
@@ -43,7 +45,7 @@
 \makeindex[columns=2, title=Alphabetical Index]
 
 \begin{document}
-	
+
 		\begin{bclogo}[couleur=MidnightBlue!2!white, arrondi=.645, logo=\bcvaletcoeur , ombre=true,epOmbre=.28,couleurOmbre=MidnightBlue!29, barre=none, nobreak=true ]{} \vspace{-2ex}	\centering\Huge It's All in the Numbers:\vspace{.5cm}  How to (Probably) Predict the Future\\[\baselineskip]	{\Large{DataTeam6}}\\ % Author name
 		{\large{ December 4th, 2018}}
 	\end{bclogo}
@@ -58,7 +60,7 @@
 %}
 %	\date{}
 	%\titlehead{\centering\includegraphics[width=6cm]{figure}}
-	\maketitle
+%	\maketitle
 		\vspace*{3in}
 		%\begin{center}
 		%	\includegraphics[width=\textwidth]{subtitle}
@@ -73,7 +75,7 @@
 	
 	Yet, for all the randomness and complications, we have become remarkably adept at muddling through the chaos, at predicting what comes next.  Even without a gift of premonition, I can largely tell how my day will go, what I will eat, when I'll finish work. I can tell what adding just the right amount of olive oil will do to my dish, without any exact measurements. With the assistance of my peers, my predictions can delve even deeper. I can predict what route to take based on the traffic, what to wear based on my weather man, which game to watch based on sports analysts, and so on.  So how have we become so good at prediction?  How can we predict finer details, such as traffic patterns, market fluctuations, or health scenarios?  Well, the answer (often) lies in the numbers.
  
- Before we begin, I just want to mention that we will mainly be looking at numerical prediction techniques.  There are certainly limitations to this approach, as we all know.  I do not care what any recipe says, my grandmother made a better spanokopita with her ``just right'' approach.  And she was remarkably consistent in her results.  Gut reactions still dominate our world, especially as the stakes get higher.  Statistics may tell you that it is unlikely that you will be attacked by a shark, but I'm still wary (I'd like to think understandably) on most beaches.  
+ Before we begin, I just want to mention that we will mainly be looking at numerical prediction techniques.  There are certainly limitations to this approach, as we all know.  Regardless of how tried and true  any recipe may be, my grandmother made a better spanokopita with her ``just right'' approach.  And she was remarkably consistent in her results.  Gut reactions still dominate our world, especially as the stakes get higher.  Statistics may tell you that it is unlikely that you will be attacked by a shark, but I'm still wary (I'd like to think understandably) on most beaches.  
  
  The value of human instinct and intuition is incredibly valuable and that will not be disputed. And at times in the book, we will see where statistical thinking came up short.   However, we want to explore areas where humans turn to their pens and computers to aid their prediction abilities, and areas where even with the aid of high powered computing, we still are blissfully unaware of what comes next.
 
@@ -140,10 +142,48 @@
 	\end{itemize}
 	Artificial intelligence.  The singularity.  Keanu Reeves.  Where to start?  What is artificial intelligence?  Are we doomed?  Aren't computers already smart?  Can we live forever?  When is this going to happen? These are questions that are commonly associated with artificial intelligence, and while we will certainly answer them as well as we can without diving too deep into philosophical waters, we would also like to explain some of the underlying theory behind machine learning, and ultimately how it connects to predictive analytics\footnote{In a nutshell, artificial intelligence is predictive analytics}.  
 	
-	Whenever artificial intelligence is mentioned, a sense of fear tends to take hold of people.  Perhaps influenced by popular movies such as the Terminator, or the Matrix, where our former friendly computers realize humans make better batteries than conversation, there is a legitimate fear in many about a one-day \imp{singularity}\index{singularity}. What is the singularity?  Broadly speaking, it is when computers will become sentient.  By this interpretation\footnote{By no means the only, or even the correct interpretation}  a computer will be cognizant of its existence.  Why does this matter?  Well, computers, with their incredible speed, processing power, and memory dwarf humans in computational ability.  But, until recently, they could not think for themselves.  They could not create.  Computers were programmable, and thus only as smart as their creators made them.  Recently, however, computers have been able to ``learn'' from their mistakes, and exhibit signs of intelligence. 
+	Whenever artificial intelligence is mentioned, a sense of fear tends to take hold of people.  Perhaps influenced by popular movies such as the Terminator, or the Matrix, where our former friendly computers realize humans make better batteries than conversation, there is a legitimate fear in many about a one-day \imp{singularity}\index{singularity}. What is the singularity?  Broadly speaking, it is when computers will become sentient.  By this interpretation\footnote{By no means the only, or even the correct interpretation}  a computer will be cognizant of its existence.  Why does this matter?  Well, computers, with their incredible speed, processing power, and memory dwarf humans in computational ability.  But, until recently, they could not think for themselves.  They could not create.  Computers were programmable, and thus only as smart as their creators made them.  Recently, however, computers have been able to ``learn'' from their mistakes, and exhibit signs of intelligence. Or so we have been told.  
 	
-	Eventually, these computers will think like humans, that is humans with nearly infinite knowledge and processing speed that not even transcendental geniuses the likes of Isaac Newton could not even fathom\footnote{My apologies to Gauss, Euler, etc.}. And, eventually, the computers will move beyond their programming, or so it is theorized. In theory, computers will be able to accelerate their learning at incomprehensible speeds, due to the processing power and memory capabilities they are endowed, and technology will increase so rapidly, that the human mind cannot imagine where it will lead.  This belief is more technically what is meant by \emph{the singularity}, and it is this definition that is often accompanied by fear and bewilderment among people\footnote{Well known scientists have expressed their reservations, to put it mildly, about artificial intelligence, such as acclaimed theoretical physicist Stephen Hawking\index{Stephen Hawking}}, thanks at least in part to doomsday predictions in movies, books, television and so on. But is their fear justified?  Will we meet our fiery doom at the hands of our metallic counterparts.  Well, in accordance with the central theme of this book, \emph{probably} not.  
+	The argument is that, eventually, these computers will think like humans, that is humans with nearly infinite knowledge and processing speed that not even transcendental geniuses the likes of Isaac Newton could not even fathom\footnote{My apologies to Gauss, Euler, etc.}. And, eventually, the computers will move beyond their programming, or so it is theorized. In theory, computers will be able to accelerate their learning at incomprehensible speeds, due to the processing power and memory capabilities they are endowed, and technology will increase so rapidly, that the human mind cannot imagine where it will lead.  This belief is more technically what is meant by \emph{the singularity}, and it is this definition that is often accompanied by fear and bewilderment among people\footnote{Well known scientists have expressed their reservations, to put it mildly, about artificial intelligence, such as acclaimed theoretical physicist Stephen Hawking\index{Stephen Hawking}}, thanks at least in part to doomsday predictions in movies, books, television and so on. But is their fear justified?  Will we meet our fiery doom at the hands of our metallic counterparts.  Well, in accordance with the central theme of this book, \emph{probably} not.  
 	
+	Artificial intelligence, (like machine learning) is in many ways just a buzz-word.  Later we will go into more detail into the algorithms behind ``machines learning'' but for now it suffices to say that computers aren't really smart.  Just ask Alexa or your google assistant any (insert specific question that actually stumps google).  What computers are doing is \emph{recognizing}. The crux behind ``deep learning'' is that computer programs are fed in lots and lots of data and eventually recognize patterns.  This is why image recognition, for example has evolved significantly in the late 0's and 10's (really would have thought we could have come up with a name for these decades by now.  Worry not, the twenties are soon upon us.)  
+	
+	While this sort of computer recognition software, given enough data, can lead to what may resemble human intelligence, it really isn't.  While it is a step-up from the if-else programming that has dominated programming for the vast majority of its history, it is still not intelligence.  However, it does have some scary problems.  Recognition learning often does not rely on parameters (more on this in the chapter on self-driving cars), ie the models do not necessarily ``mean'' anything.  Traditionally, for prediction problems, statisticians, psychologists, baseball teams, and many more fit a straight line to a graph between their desired outcome (y-axis) and what they believe is a variable that should be related to it (x-axis).  A simple example is expressed in figure \ref{figurebaseball}.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{baseballpic}
+		\caption{Team wins vs batting average, MLB 2018}
+	\end{figure}
+
+
+
+	\noindent\rule{3cm}{0.6pt}
+\\
+
+\vspace{-1.25cm}
+\noindent\rule{3cm}{0.6pt}  \textbf{Technical Sidebar}
+
+
+**Include some details from regression 530 notes, OLS, matrix form, and confidence bands**
+
+
+\setlength\parindent{9cm}\rule{3cm}{0.6pt}
+\\
+
+\vspace{-1.25cm}
+\setlength\parindent{9cm}\rule{3cm}{0.6pt}
+
+\setlength\parindent{.75cm}
+	
+	We interpret our regression result as a 10 point increase in team batting average (.300 to .310) increases a teams win total by 6.95\%.  Since there are 162 games in a season, 11.26 wins better.  Obviously, from the graph, this regression is rather meaningless, and we have several metrics and methods to back this up.  ($R^2=0.45$, histogram, assumptions etc.)  If we extrapolate this to the point where a team has a batting average of 0, then we predict a team would win -2 games, which obviously makes no sense.  Therefore, it would not necessarily be our best predictor.  Of course, we can include more variables and do a multiple linear regression, which could improve our model, and while the interpretation is not quite as cut and dry, especially since we may need to scale some variables.  We can't just plot the regression as easy anymore, as we have multiple x-variables (although we can still compare our output to our a teams winning percentage, the ``y'' variable).  
+	
+	This regression still does have real, physical parameters that can be explained if we are careful and think it through.  In fact, linear regression is an old and well researched and developed tool, with established methods to verify the validity of results and optimize results (ie which variables are most effective to best predictions, or fitting confidence intervals around our line of best fit, prediction bands etc).  
+	
+	An ``artificial intelligence'' method, such as a regression tree or a neural network, on the other hand, would likely yield better prediction on a teams final win total.  Given enough data on past winning teams, we can train these models and then use the trained version of the model (with all the trained weights in the case of the neural nets) to predict the current year (2018) and compare it to actual results.  
+	
+	Likely, this will yield better accuracy by different statistical metrics (MSE, etc.), which is useful.  However, it may not \emph{mean} anything.  And therein lies the problem with these new computer ``learning'' methods.  The neural network, for example, may weigh certain variables of interest heavier or lighter based on how they have predicted in the past, in a way linear regression is unable to.  How often are things linearly related, or even related by some obvious function?  Probably not very.  But, the machine learning methods do not tell us why variables are important, or how they specifically lead to our desired result.  And just relying on that answer could be dangerous if we do not know why it works.  A baseball team may use the output, despite its lack of clear reasoning, because of its predictive power, but then regret the decision when a drastic change in the game renders the results from the neural net/decision tree regression useless.  
+	
+	For example, in 2016-2017, players (from the advice of sabermetrics) decided strike outs were okay, and decided to live by the ``elevate-celebrate'' motto.  Home runs were at a record high[cite].  This paradigm shift in the game would not have been present in the past data, so the non-parametric predictions now lose some of their shine.
 	
 	\chapter{Financial Markets}
 	
