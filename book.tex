@@ -2,7 +2,8 @@
 \usepackage[toc,page]{appendix}
 %\usepackage[left=2.5cm,top=3cm,right=2.5cm,bottom=3cm, bindingoffset=0.5cm]{geometry}
 
-\usepackage[paperheight=9in,paperwidth=7.5in,top=1in,bottom=1in,right=1in,left=1in,heightrounded,showframe, bindingoffset=0.5cm]{geometry}
+\usepackage[paperheight=9in,paperwidth=7.5in,top=1in,bottom=1in,right=1in,left=1in, bindingoffset=0.5cm]{geometry}
+%,heightrounded,showframe,
 \usepackage[font={small}, labelfont=bf]{caption}
 \usepackage{subcaption}
 \usepackage[utf8]{inputenc}
@@ -43,7 +44,16 @@
 \usepackage{physics}
 \usepackage[tikz]{bclogo}
 \makeindex[columns=2, title=Alphabetical Index]
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor={BrickRed!69!black},
+	filecolor=magenta,      
+	urlcolor=darkgreen,
+	citecolor={MidnightBlue!69!black},
+}
 
+%\urlstyle{same}
 \begin{document}
 
 		\begin{bclogo}[couleur=MidnightBlue!2!white, arrondi=.645, logo=\bcvaletcoeur , ombre=true,epOmbre=.28,couleurOmbre=MidnightBlue!29, barre=none, nobreak=true ]{} \vspace{-2ex}	\centering\Huge The Art of the Prediction:\vspace{.5cm}  How to (Probably) Predict the Future\\[\baselineskip]	{\Large{DataTeam6}}\\ % Author name
@@ -131,6 +141,7 @@
 	\begin{itemize}
 		\item Talk in this section about probability, and how modern computing is in many ways indebted to probability, see Alan Turing and Enigma code breaking.  
 		\item Introduce classical, frequentist statistical thought, and Baye's rule, and how they affect our way of thinking about future events
+		\item Potential frisbee names such as frequentDisc or frisBayes.
 	\end{itemize}
 	Anybody who wants to delve into the art of prediction would be wise to acquaint themselves with statistics.  This probably is not anything that most have not heard before, and is certainly much easier said than done.  
 	
@@ -304,17 +315,17 @@ Ostensibly, the conclusion from Leicester City is to bet on the underdog.  Well,
 		\bibitem{universeage} 
 		http://www.space.com/24054-how-old-is-the-universe.html
 		\bibitem{nasalife} 
-		$https://www.nasa.gov/mission_pages/cassini/main/index.html$
+		https://www.nasa.gov/mission\_pages/cassini/main/index.html
 		\bibitem{eandm} radio wave stuff
 		\bibitem{dolphinssmart}	http://www.pnas.org/content/99/7/4436.full
-		\bibitem{leicester} $http://www.espn.com/chalk/story/_/id/15447878/putting-leicester-city-5000-1-odds-perspective-other-long-shots-espn-chalk$
+		\bibitem{leicester}http://www.espn.com/chalk/story/\_/id/15447878/putting-leicester-city-5000-1-odds-perspective-other-long-shots-espn-chalk
 		\bibitem{leicester2}http://legendsrevealed.com/sports/2016/05/09/were-leicester-city-chances-of-winning-the-premier-league-really-5000-to-1/
 		\bibitem{leicester3} Corless, Liam (16 May 2015). "The incredible run that secured Leicester City's Premier League survival".
 		\bibitem{leicester5}Osborne, Chris (19 December 2015). "Everton 2–3 Leicester City". BBC Sport. Retrieved 4 May 2016.
 		\bibitem{Leicester4}
 		Osborne, Chris (19 December 2015). "Everton 2–3 Leicester City". BBC Sport. Retrieved 4 May 2016.
 		\bibitem{leicester6} http://www.bbc.co.uk/sport/football/39072867
-		\bibitem{leicester7}$http://www.huffingtonpost.com/entry/10-real-things-more-likely-than-seeing-leicester-city-win-the-english-premier-league_us_5723869ae4b0f309baf0ad9d$
+		\bibitem{leicester7}http://www.huffingtonpost.com/entry/10-real-things-more-likely-than-seeing-leicester-city-win-the-english-premier-league\_us\_5723869ae4b0f309baf0ad9d
 	\end{thebibliography}
 %\printindex
 \end{document}
